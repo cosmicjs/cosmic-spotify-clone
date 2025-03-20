@@ -1,8 +1,10 @@
 # Spotify Clone
 
-A Spotify-like music streaming application built with Next.js and Cosmic CMS.
+A Spotify-like music streaming application built with Next.js and [Cosmic](https://www.cosmicjs.com) CMS.
 
 [Live Demo](https://cosmic-spotify-clone.vercel.app)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcosmicjs%2Fcosmic-spotify-clone&env=COSMIC_BUCKET_SLUG,COSMIC_READ_KEY,COSMIC_WRITE_KEY&envDescription=Required%20API%20keys%20from%20Cosmic&envLink=https%3A%2F%2Fwww.cosmicjs.com%2Fdocs%2Fapi%2Fauthentication)
 
 [![Spotify Clone Screenshot 2](https://imgix.cosmicjs.com/9d793800-05d7-11f0-993b-3bd041905fff-cosmic-spotify-2.png?w=1200&auto=format,compression)](https://cosmic-spotify-clone.vercel.app)
 
