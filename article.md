@@ -165,7 +165,7 @@ const cosmic = createBucketClient({
 export default cosmic;
 ```
 
-## Seeding the Database
+## Seeding the CMS
 
 Create `scripts/seed-cosmic.ts` to set up our object types and sample content:
 
