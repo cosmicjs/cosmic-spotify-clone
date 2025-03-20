@@ -6,7 +6,13 @@ import TrackList from "@/components/TrackList";
 import { getPlaylist } from "@/app/actions";
 import { Playlist, Track } from "@/types";
 
-export default function PlaylistPage({ params }: { params: { slug: string } }) {
+interface PlaylistPageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default function PlaylistPage({ params }: PlaylistPageProps) {
   const [playlist, setPlaylist] = useState<Playlist | null>(null);
   const [tracks, setTracks] = useState<Track[]>([]);
   const [loading, setLoading] = useState(true);
