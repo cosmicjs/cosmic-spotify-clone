@@ -19,7 +19,7 @@ A Spotify-like music streaming application built with Next.js and Cosmic CMS.
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/cosmicjs/cosmic-spotify-clone
 cd spotify-clone
 ```
 
