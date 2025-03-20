@@ -1,5 +1,3 @@
-import Loading from "@/components/Loading";
-
 export default function PlaylistLoading() {
   return (
     <div className="container mx-auto p-4">
