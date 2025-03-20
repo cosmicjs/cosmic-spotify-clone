@@ -44,7 +44,7 @@ export default function Navigation() {
             href="https://cosmicjs.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-900 dark:hover:text-white"
+            className="text-[#1DB954] hover:text-[#1ed760]"
           >
             Cosmic
           </a>
