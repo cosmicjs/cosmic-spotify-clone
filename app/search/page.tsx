@@ -25,7 +25,7 @@ export default function Search() {
           </a>
           <span>•</span>
           <a
-            href="https://github.com/cosmicjs/spotify-clone"
+            href="https://github.com/cosmicjs/cosmic-spotify-clone"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition-colors"

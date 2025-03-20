@@ -16,7 +16,7 @@ export default function Footer() {
               Built with Cosmic
             </a>
             <a
-              href="https://github.com/cosmicjs/spotify-clone"
+              href="https://github.com/cosmicjs/cosmic-spotify-clone"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-gray-400 hover:text-white transition-colors"
