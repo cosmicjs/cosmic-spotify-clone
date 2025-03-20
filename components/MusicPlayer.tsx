@@ -135,17 +135,19 @@ export default function MusicPlayer({
   if (!track) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gray-900 p-4">
+    <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 p-4 border-t border-gray-200 dark:border-gray-800">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <img
             src={track.metadata.album.metadata.cover.imgix_url}
-            className="h-12 w-12 rounded"
+            className="h-12 w-12 rounded shadow-sm"
             alt={track.title}
           />
           <div>
-            <p className="text-white">{track.title}</p>
-            <p className="text-gray-400">
+            <p className="text-gray-900 dark:text-white font-medium">
+              {track.title}
+            </p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
               {track.metadata.album.metadata.artist.title}
             </p>
           </div>
@@ -154,7 +156,7 @@ export default function MusicPlayer({
         <div className="flex-1 mx-8">
           <div className="flex items-center justify-center space-x-4">
             <button
-              className="text-white bg-green-500 rounded-full p-2 cursor-pointer"
+              className="text-white bg-green-500 hover:bg-green-600 rounded-full p-2 cursor-pointer transition-colors"
               onClick={togglePlayPause}
             >
               {isPlaying ? (
@@ -177,16 +179,16 @@ export default function MusicPlayer({
             </button>
           </div>
           <div className="flex items-center mt-2">
-            <span className="text-gray-400 text-xs">
+            <span className="text-gray-500 dark:text-gray-400 text-xs">
               {formatTime(currentTime)}
             </span>
-            <div className="mx-2 flex-1 bg-gray-700 rounded-full h-1">
+            <div className="mx-2 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-1">
               <div
-                className="bg-white h-1 rounded-full"
+                className="bg-green-500 h-1 rounded-full"
                 style={{ width: `${(currentTime / duration) * 100}%` }}
               ></div>
             </div>
-            <span className="text-gray-400 text-xs">
+            <span className="text-gray-500 dark:text-gray-400 text-xs">
               {formatTime(duration)}
             </span>
           </div>

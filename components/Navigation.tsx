@@ -29,24 +29,29 @@ export default function Navigation() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="fixed left-0 top-0 w-64 h-screen bg-black p-6 flex flex-col">
+    <nav className="fixed left-0 top-0 w-64 h-screen bg-white dark:bg-black p-6 flex flex-col border-r border-gray-200 dark:border-gray-800">
       {/* Logo */}
       <div className="mb-8">
-        <Link href="/" className="text-2xl font-bold text-white">
+        <Link
+          href="/"
+          className="text-2xl font-bold text-gray-900 dark:text-white"
+        >
           Spotify Clone
         </Link>
       </div>
 
       {/* Browse */}
       <div className="space-y-4">
-        <h2 className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+        <h2 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
           Browse
         </h2>
         <div className="space-y-2">
           <Link
             href="/"
             className={`flex items-center space-x-4 text-sm font-medium ${
-              isActive("/") ? "text-white" : "text-gray-400 hover:text-white"
+              isActive("/")
+                ? "text-gray-900 dark:text-white"
+                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
             }`}
           >
             <svg
@@ -68,8 +73,8 @@ export default function Navigation() {
             href="/search"
             className={`flex items-center space-x-4 text-sm font-medium ${
               isActive("/search")
-                ? "text-white"
-                : "text-gray-400 hover:text-white"
+                ? "text-gray-900 dark:text-white"
+                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
             }`}
           >
             <svg
@@ -91,8 +96,8 @@ export default function Navigation() {
             href="/library"
             className={`flex items-center space-x-4 text-sm font-medium ${
               isActive("/library")
-                ? "text-white"
-                : "text-gray-400 hover:text-white"
+                ? "text-gray-900 dark:text-white"
+                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
             }`}
           >
             <svg
@@ -115,7 +120,7 @@ export default function Navigation() {
 
       {/* Playlists */}
       <div className="mt-8 space-y-4">
-        <h2 className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+        <h2 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
           Playlists
         </h2>
         <div className="space-y-2">
@@ -123,8 +128,8 @@ export default function Navigation() {
             // Loading skeleton for playlists
             [...Array(2)].map((_, i) => (
               <div key={i} className="flex items-center space-x-4">
-                <div className="w-6 h-6 bg-gray-800 rounded animate-pulse"></div>
-                <div className="h-4 bg-gray-800 rounded w-32 animate-pulse"></div>
+                <div className="w-6 h-6 bg-gray-200 dark:bg-gray-800 rounded animate-pulse"></div>
+                <div className="h-4 bg-gray-200 dark:bg-gray-800 rounded w-32 animate-pulse"></div>
               </div>
             ))
           ) : (
@@ -135,8 +140,8 @@ export default function Navigation() {
                   href={`/playlists/${playlist.slug}`}
                   className={`flex items-center space-x-4 text-sm font-medium ${
                     isActive(`/playlists/${playlist.slug}`)
-                      ? "text-white"
-                      : "text-gray-400 hover:text-white"
+                      ? "text-gray-900 dark:text-white"
+                      : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
                   }`}
                 >
                   <svg
@@ -157,7 +162,7 @@ export default function Navigation() {
               ))}
               <Link
                 href="/playlists/liked-songs"
-                className="flex items-center space-x-4 text-sm font-medium text-gray-400 hover:text-white"
+                className="flex items-center space-x-4 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
               >
                 <svg
                   className="w-6 h-6"

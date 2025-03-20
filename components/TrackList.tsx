@@ -19,25 +19,35 @@ export default function TrackList({ tracks }: TrackListProps) {
   return (
     <div className="mt-6">
       <h3 className="text-xl font-semibold mb-3">Tracks</h3>
-      <div className="bg-gray-800 rounded-lg overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm">
         <table className="w-full">
-          <thead className="border-b border-gray-700">
+          <thead className="border-b border-gray-200 dark:border-gray-700">
             <tr>
-              <th className="px-4 py-2 text-left">#</th>
-              <th className="px-4 py-2 text-left">Title</th>
-              <th className="px-4 py-2 text-right">Duration</th>
+              <th className="px-4 py-2 text-left text-gray-600 dark:text-gray-300">
+                #
+              </th>
+              <th className="px-4 py-2 text-left text-gray-600 dark:text-gray-300">
+                Title
+              </th>
+              <th className="px-4 py-2 text-right text-gray-600 dark:text-gray-300">
+                Duration
+              </th>
             </tr>
           </thead>
           <tbody>
             {tracks.map((track, index) => (
               <tr
                 key={track.id}
-                className={`hover:bg-gray-700 cursor-pointer ${
-                  currentTrack?.id === track.id ? "bg-gray-700" : ""
+                className={`hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer ${
+                  currentTrack?.id === track.id
+                    ? "bg-gray-50 dark:bg-gray-700"
+                    : ""
                 }`}
                 onClick={() => togglePlayPause(track)}
               >
-                <td className="px-4 py-3 text-gray-400">{index + 1}</td>
+                <td className="px-4 py-3 text-gray-500 dark:text-gray-400">
+                  {index + 1}
+                </td>
                 <td className="px-4 py-3">
                   <div className="flex items-center">
                     <div className="w-6 h-4 mr-2">
@@ -55,10 +65,12 @@ export default function TrackList({ tracks }: TrackListProps) {
                         </svg>
                       ) : null}
                     </div>
-                    <span>{track.title}</span>
+                    <span className="text-gray-900 dark:text-white">
+                      {track.title}
+                    </span>
                   </div>
                 </td>
-                <td className="px-4 py-3 text-right text-gray-400">
+                <td className="px-4 py-3 text-right text-gray-500 dark:text-gray-400">
                   {formatDuration(track.metadata.duration)}
                 </td>
               </tr>
