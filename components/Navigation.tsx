@@ -38,6 +38,17 @@ export default function Navigation() {
         >
           Spotify Clone
         </Link>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          Powered by{" "}
+          <a
+            href="https://cosmicjs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-900 dark:hover:text-white"
+          >
+            Cosmic
+          </a>
+        </p>
       </div>
 
       {/* Browse */}
