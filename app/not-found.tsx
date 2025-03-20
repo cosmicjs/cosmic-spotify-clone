@@ -7,8 +7,8 @@ export default function NotFound() {
         <h1 className="text-6xl font-bold text-white">404</h1>
         <h2 className="text-2xl font-semibold text-white">Page Not Found</h2>
         <p className="text-gray-400">
-          This is a demo app showing what's possible with Cosmic CMS. The page
-          you're looking for doesn't exist in this demo.
+          This is a demo app showing what&apos;s possible with Cosmic CMS. The
+          page you&apos;re looking for doesn&apos;t exist in this demo.
         </p>
         <div className="space-y-4">
           <Link

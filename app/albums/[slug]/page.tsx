@@ -1,11 +1,12 @@
 import AlbumDetail from "@/components/AlbumDetail";
 
 interface AlbumPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function AlbumPage({ params }: AlbumPageProps) {
-  return <AlbumDetail slug={params.slug} />;
+export default async function AlbumPage({ params }: AlbumPageProps) {
+  const { slug } = await params;
+  return <AlbumDetail slug={slug} />;
 }
