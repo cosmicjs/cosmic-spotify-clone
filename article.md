@@ -29,6 +29,15 @@ Our Spotify clone will feature:
 
 First, let's create a new Next.js project with TypeScript:
 
+Using bun (recommended):
+
+```bash
+bunx create-next-app spotify-clone --typescript
+cd spotify-clone
+```
+
+Using npm:
+
 ```bash
 npx create-next-app spotify-clone --typescript
 cd spotify-clone
@@ -36,12 +45,29 @@ cd spotify-clone
 
 Install the required dependencies:
 
+Using bun:
+
+```bash
+bun add @cosmicjs/sdk react-audio-player
+bun add -d tailwindcss postcss autoprefixer @types/react-audio-player
+```
+
+Using npm:
+
 ```bash
 npm install @cosmicjs/sdk react-audio-player
 npm install -D tailwindcss postcss autoprefixer @types/react-audio-player
 ```
 
 Initialize Tailwind CSS:
+
+Using bun:
+
+```bash
+bunx tailwindcss init -p
+```
+
+Using npm:
 
 ```bash
 npx tailwindcss init -p
@@ -506,6 +532,14 @@ seed();
 ```
 
 Run the seed script to set up your Cosmic bucket:
+
+Using bun:
+
+```bash
+bun scripts/seed-cosmic.ts
+```
+
+Using npm:
 
 ```bash
 npx ts-node scripts/seed-cosmic.ts
@@ -1028,6 +1062,14 @@ export default async function PlaylistPage({
 ## Running the Application
 
 Start the development server:
+
+Using bun:
+
+```bash
+bun dev
+```
+
+Using npm:
 
 ```bash
 npm run dev

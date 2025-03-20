@@ -19,7 +19,8 @@ A Spotify-like music streaming application built with Next.js and [Cosmic](https
 
 ## Prerequisites
 
-- Node.js 18.x or later
+- Node.js 18.x or later (if using npm)
+- Bun runtime (if using bun)
 - A Cosmic CMS account and bucket
 
 ## Getting Started
@@ -41,6 +42,14 @@ cd spotify-clone
 
 3. Install dependencies:
 
+Using bun (recommended):
+
+```bash
+bun install
+```
+
+Using npm:
+
 ```bash
 npm install
 ```
@@ -55,17 +64,66 @@ COSMIC_WRITE_KEY=your-write-key
 
 5. Set up the Cosmic object types by running the seed script:
 
+Using bun:
+
 ```bash
-npx ts-node scripts/seed-cosmic.ts
+bun scripts/seed-cosmic.ts
+```
+
+Using npm:
+
+```bash
+npm run seed
 ```
 
 6. Start the development server:
+
+Using bun:
+
+```bash
+bun dev
+```
+
+Using npm:
 
 ```bash
 npm run dev
 ```
 
 7. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Converting from npm to bun
+
+If you have an existing project using npm and want to convert to bun, follow these steps:
+
+1. Install bun globally (if you haven't already):
+
+```bash
+curl -fsSL https://bun.sh/install | bash
+```
+
+2. Remove the existing node_modules folder and package-lock.json:
+
+```bash
+rm -rf node_modules package-lock.json
+```
+
+3. Install dependencies using bun:
+
+```bash
+bun install
+```
+
+4. Update your scripts to use bun:
+
+   - Replace `npm run` with `bun run`
+   - For TypeScript scripts, you can run them directly with bun (e.g., `bun scripts/seed-cosmic.ts`)
+
+5. Start the development server with bun:
+
+```bash
+bun dev
+```
 
 ## Project Structure
 
