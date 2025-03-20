@@ -2,6 +2,14 @@
 
 Streaming music platforms have revolutionized how we consume audio content. In this tutorial, we'll build a Spotify-like music streaming application using Next.js for the frontend and [Cosmic](https://www.cosmicjs.com) as our headless CMS to manage music tracks, artists, and playlists.
 
+[Live Demo](https://cosmic-spotify-clone.vercel.app) | [GitHub Repository](https://github.com/cosmicjs/cosmic-spotify-clone)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcosmicjs%2Fcosmic-spotify-clone&env=COSMIC_BUCKET_SLUG,COSMIC_READ_KEY,COSMIC_WRITE_KEY&envDescription=Required%20API%20keys%20from%20Cosmic&envLink=https%3A%2F%2Fwww.cosmicjs.com%2Fdocs%2Fapi%2Fauthentication)
+
+[![Spotify Clone Screenshot 2](https://imgix.cosmicjs.com/9d793800-05d7-11f0-993b-3bd041905fff-cosmic-spotify-2.png?w=1200&auto=format,compression)](https://cosmic-spotify-clone.vercel.app)
+
+[![Spotify Clone Screenshot 1](https://imgix.cosmicjs.com/9d6784c0-05d7-11f0-993b-3bd041905fff-cosmic-spotify-1.png?w=1200&auto=format,compression)](https://cosmic-spotify-clone.vercel.app)
+
 ## What We'll Build
 
 Our Spotify clone will feature:
@@ -1024,3 +1032,42 @@ Start the development server:
 ```bash
 npm run dev
 ```
+
+## Conclusion
+
+We've successfully built a Spotify clone using Next.js and Cosmic! Here's what we've accomplished:
+
+1. Created a modern, responsive music streaming application
+2. Implemented a music player with playback controls and keyboard shortcuts
+3. Built a library system for albums and playlists
+4. Set up a headless CMS with Cosmic to manage our music content
+5. Created a beautiful UI with Tailwind CSS
+
+The application demonstrates the power of combining Next.js for the frontend with Cosmic as a headless CMS. We've shown how to:
+
+- Structure a Next.js application with TypeScript
+- Manage state with React Context
+- Handle server-side rendering and data fetching
+- Create reusable components
+- Implement audio playback functionality
+- Style our application with Tailwind CSS
+
+### Next Steps
+
+Here are some ideas to enhance the application further:
+
+1. **Authentication**: Add user authentication to allow users to create and manage their own playlists
+2. **Search Functionality**: Implement a search feature to find tracks, albums, and artists
+3. **User Profiles**: Create user profiles with listening history and favorite tracks
+4. **Social Features**: Add the ability to follow artists and share playlists
+5. **Offline Mode**: Implement offline playback using service workers
+6. **Mobile App**: Create a mobile app version using React Native or Next.js mobile features
+
+### Resources
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Cosmic Documentation](https://www.cosmicjs.com/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [React Audio Player Documentation](https://github.com/justinmc/react-audio-player)
+
+We hope this tutorial has helped you understand how to build a modern music streaming application. Feel free to customize the design and add more features to make it your own!
