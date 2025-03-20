@@ -35,6 +35,7 @@ export interface Album {
 
 export interface Playlist {
   id: string;
+  slug: string;
   title: string;
   metadata: {
     description: string;
