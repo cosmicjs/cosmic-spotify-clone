@@ -357,130 +357,131 @@ async function seedObjectTypes() {
   });
 }
 
-// Seed sample content
+// Create sample content
 async function seedContent() {
   // Upload artist images
-  const taylorImage = await uploadImageFromUrl(
+  const lunaImage = await uploadImageFromUrl(
     "https://images.unsplash.com/photo-1494354145959-25cb82edf23d?w=400&h=400&fit=crop",
-    "taylor-swift.jpg"
+    "luna-moon.jpg"
   );
-  const edImage = await uploadImageFromUrl(
+  const novaImage = await uploadImageFromUrl(
     "https://images.unsplash.com/photo-1516223725307-6f76b9ec8742?w=400&h=400&fit=crop",
-    "ed-sheeran.jpg"
+    "nova-star.jpg"
   );
 
   // Create sample artists
   const { object: artist1 } = await cosmic.objects.insertOne({
-    title: "Taylor Swift",
-    slug: "taylor-swift",
+    title: "Luna Moon",
+    slug: "luna-moon",
     type: "artists",
-    thumbnail: taylorImage.name,
+    thumbnail: lunaImage.name,
     metadata: {
-      name: "Taylor Swift",
-      bio: "Taylor Swift is an American singer-songwriter. Her narrative songwriting, which often centers around her personal life, has received widespread media coverage and critical praise.",
-      image: taylorImage.name,
+      name: "Luna Moon",
+      bio: "Luna Moon is a cosmic pop sensation known for her ethereal vocals and space-themed music. Her unique blend of electronic and acoustic elements has created a new genre called 'astro-pop'.",
+      image: lunaImage.name,
     },
   });
 
   const { object: artist2 } = await cosmic.objects.insertOne({
-    title: "Ed Sheeran",
-    slug: "ed-sheeran",
+    title: "Nova Star",
+    slug: "nova-star",
     type: "artists",
-    thumbnail: edImage.name,
+    thumbnail: novaImage.name,
     metadata: {
-      name: "Ed Sheeran",
-      bio: "Ed Sheeran is an English singer-songwriter. Known for his distinctive voice and acoustic guitar-driven songs, he has become one of the world's best-selling music artists.",
-      image: edImage.name,
+      name: "Nova Star",
+      bio: "Nova Star is an indie rock phenomenon who writes songs about quantum physics and parallel universes. His experimental sound has earned him the nickname 'The Einstein of Rock'.",
+      image: novaImage.name,
     },
   });
 
   // Upload album covers
-  const midnightsCover = await uploadImageFromUrl(
+  const starlightCover = await uploadImageFromUrl(
     "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&h=400&fit=crop",
-    "midnights.jpg"
+    "starlight.jpg"
   );
-  const divideCover = await uploadImageFromUrl(
+  const quantumCover = await uploadImageFromUrl(
     "https://images.unsplash.com/photo-1557264337-e8a93017fe92?w=400&h=400&fit=crop",
-    "divide.jpg"
+    "quantum.jpg"
   );
 
   // Create sample albums
   const { object: album1 } = await cosmic.objects.insertOne({
-    title: "Midnights",
-    slug: "midnights",
+    title: "Starlight Symphony",
+    slug: "starlight-symphony",
     type: "albums",
-    thumbnail: midnightsCover.name,
+    thumbnail: starlightCover.name,
     metadata: {
-      title: "Midnights",
-      release_date: "2022-10-21",
+      title: "Starlight Symphony",
+      release_date: "2023-06-15",
       artist: artist1.id,
-      cover: midnightsCover.name,
+      cover: starlightCover.name,
     },
   });
 
   const { object: album2 } = await cosmic.objects.insertOne({
-    title: "÷ (Divide)",
-    slug: "divide",
+    title: "Quantum Dreams",
+    slug: "quantum-dreams",
     type: "albums",
-    thumbnail: divideCover.name,
+    thumbnail: quantumCover.name,
     metadata: {
-      title: "÷ (Divide)",
-      release_date: "2017-03-03",
+      title: "Quantum Dreams",
+      release_date: "2023-08-22",
       artist: artist2.id,
-      cover: divideCover.name,
+      cover: quantumCover.name,
     },
   });
 
   // Create sample tracks
-  const antiHeroAudio = await uploadAudioFromUrl(
+  const cosmicDanceAudio = await uploadAudioFromUrl(
     "https://cdn.cosmicjs.com/1474f620-05be-11f0-993b-3bd041905fff-relaxing-jazz-saxophone-music-saxophone-instruments-music-303093.mp3",
-    "anti-hero.mp3"
+    "cosmic-dance.mp3"
   );
 
-  const shapeOfYouAudio = await uploadAudioFromUrl(
+  const parallelWorldsAudio = await uploadAudioFromUrl(
     "https://cdn.cosmicjs.com/147e44f0-05be-11f0-993b-3bd041905fff-iced-coffee-jazz-309947.mp3",
-    "shape-of-you.mp3"
+    "parallel-worlds.mp3"
   );
 
   const { object: track1 } = await cosmic.objects.insertOne({
-    title: "Anti-Hero",
-    slug: "anti-hero",
+    title: "Cosmic Dance",
+    slug: "cosmic-dance",
     type: "tracks",
     metadata: {
-      title: "Anti-Hero",
-      duration: 300,
+      title: "Cosmic Dance",
+      duration: 245,
       album: album1.id,
-      audio: antiHeroAudio.name,
+      audio: cosmicDanceAudio.name,
     },
   });
 
   const { object: track2 } = await cosmic.objects.insertOne({
-    title: "Shape of You",
-    slug: "shape-of-you",
+    title: "Parallel Worlds",
+    slug: "parallel-worlds",
     type: "tracks",
     metadata: {
-      title: "Shape of You",
-      duration: 280,
+      title: "Parallel Worlds",
+      duration: 312,
       album: album2.id,
-      audio: shapeOfYouAudio.name,
+      audio: parallelWorldsAudio.name,
     },
   });
 
   // Upload playlist cover
   const playlistCover = await uploadImageFromUrl(
     "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop",
-    "top-hits-2023.jpg"
+    "cosmic-hits.jpg"
   );
 
   // Create sample playlist
   await cosmic.objects.insertOne({
-    title: "Top Hits 2023",
-    slug: "top-hits-2023",
+    title: "Cosmic Hits 2023",
+    slug: "cosmic-hits-2023",
     type: "playlists",
     thumbnail: playlistCover.name,
     metadata: {
-      title: "Top Hits 2023",
-      description: "A collection of the biggest hits from 2023",
+      title: "Cosmic Hits 2023",
+      description:
+        "A stellar collection of the year's most out-of-this-world tracks",
       tracks: [track1.id, track2.id],
       cover: playlistCover.name,
     },
@@ -1023,27 +1024,3 @@ Start the development server:
 ```bash
 npm run dev
 ```
-
-Visit [http://localhost:3000](http://localhost:3000) to see your application.
-
-## Conclusion
-
-In this tutorial, we've built a functional Spotify clone using Next.js and Cosmic. The application demonstrates how quickly you can create complex applications when using a headless CMS for content management.
-
-We've covered:
-
-- Setting up a Next.js project with TypeScript
-- Configuring Cosmic as our backend
-- Creating a seed script to populate our database
-- Building reusable components
-- Implementing a music player with playback controls
-- Creating responsive layouts with Tailwind CSS
-
-You can expand this application by:
-
-- Adding user authentication
-- Implementing search functionality
-- Adding social features like sharing playlists
-- Creating personalized recommendations
-
-Happy coding!
