@@ -24,20 +24,28 @@ A Spotify-like music streaming application built with Next.js and [Cosmic](https
 
 ## Getting Started
 
-1. Clone the repository:
+1. **Set up Cosmic:**
+
+   - Sign up for a free account at [https://www.cosmicjs.com/signup](https://www.cosmicjs.com/signup)
+   - After signing up, create a new project by clicking "Create Bucket"
+   - Choose the "Empty Bucket" option and give your project a name
+   - Once created, find your bucket credentials by going to Project Settings > API Access
+   - Copy your bucket slug and API keys for the next steps
+
+2. Clone the repository:
 
 ```bash
 git clone https://github.com/cosmicjs/cosmic-spotify-clone
 cd spotify-clone
 ```
 
-2. Install dependencies:
+3. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Create a `.env.local` file in the root directory with your Cosmic credentials:
+4. Create a `.env.local` file in the root directory with your Cosmic credentials:
 
 ```env
 COSMIC_BUCKET_SLUG=your-bucket-slug
@@ -45,19 +53,19 @@ COSMIC_READ_KEY=your-read-key
 COSMIC_WRITE_KEY=your-write-key
 ```
 
-4. Set up the Cosmic object types by running the seed script:
+5. Set up the Cosmic object types by running the seed script:
 
 ```bash
 npx ts-node scripts/seed-cosmic.ts
 ```
 
-5. Start the development server:
+6. Start the development server:
 
 ```bash
 npm run dev
 ```
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+7. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
