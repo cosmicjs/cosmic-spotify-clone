@@ -48,6 +48,15 @@ export default function Navigation() {
           >
             Cosmic
           </a>
+          {" • "}
+          <a
+            href="https://github.com/cosmicjs/cosmic-spotify-clone"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#1DB954] hover:text-[#1ed760]"
+          >
+            GitHub
+          </a>
         </p>
       </div>
 
