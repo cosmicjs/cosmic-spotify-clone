@@ -140,14 +140,14 @@ export default function MusicPlayer({
         <div className="flex items-center space-x-4">
           <img
             src={track.metadata.album.metadata.cover.imgix_url}
-            className="h-12 w-12 rounded shadow-sm"
+            className="h-12 w-12 flex-shrink-0 rounded shadow-sm"
             alt={track.title}
           />
-          <div>
-            <p className="text-gray-900 dark:text-white font-medium">
+          <div className="w-[200px] flex-shrink-0">
+            <p className="text-gray-900 dark:text-white font-medium truncate">
               {track.title}
             </p>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">
+            <p className="text-gray-500 dark:text-gray-400 text-sm truncate">
               {track.metadata.album.metadata.artist.title}
             </p>
           </div>
