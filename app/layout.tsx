@@ -31,9 +31,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-black text-white`}>
         <PlayerProvider>
-          <div className="flex min-h-screen">
-            <Navigation />
-            <main className="flex-1 ml-64 min-h-screen pb-24">{children}</main>
+          <Navigation />
+          <div className="md:pl-64">
+            <main className="min-h-[calc(100vh-90px)]">{children}</main>
           </div>
           <Footer />
         </PlayerProvider>
