@@ -135,7 +135,7 @@ bun dev
 
 ## Technologies Used
 
-- Next.js 14
+- Next.js 15
 - TypeScript
 - Tailwind CSS
 - Cosmic CMS
